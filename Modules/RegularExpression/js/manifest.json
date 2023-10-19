@@ -1,0 +1,70 @@
+{
+	
+	"name":"RegularExpression",
+	"info":{"en": "Execute regular expressions to obtain one or several results.", "ru": "Выполните регулярное выражения, чтобы получить один или несколько результатов."},
+
+	"icon":"RegularExpression.png",
+	"description":"Regular Expession",
+	"description_small":{"en": "Regular expressions", "ru": "Регулярные выражения"},
+	"major_version": 1,
+	"minor_version": 1,
+	"developer_name": "bablosoft", 
+	"developer_email": "mail.to.twaego@gmail.com", 
+	"developer_site": "https://bablosoft.com",
+	"api_version": 1,
+	"actions":
+	[
+		{
+			"name":"RegexpFirst",
+			"description":{"en": "First match","ru": "Первое вхождение"},
+			"template":"{{Regexp}} -> {{Result}}",
+			"is_element": false,
+			"interface": "regexp_first_interface.js",
+			"select": "regexp_first_select.js",
+			"code": [{"file":"regexp_first_code.js", "name": "regexp_first_code"}]
+		},
+		{
+			"name":"RegexpScan",
+			"description":{"en": "Exctract all data","ru": "Извлечь все данные"},
+			"template":"{{Regexp}} -> {{Result}}",
+			"is_element": false,
+			"interface": "regexp_scan_interface.js",
+			"select": "regexp_scan_select.js",
+			"code": [{"file":"regexp_scan_code.js", "name": "regexp_scan_code"}]
+		},
+		{
+			"name":"RegexpMatch",
+			"description":{"en": "Check if string matches regexp","ru": "Подходит ли строка под регулярное выражение"},
+			"template":"{{Regexp}} -> {{Result}}",
+			"is_element": false,
+			"interface": "regexp_match_interface.js",
+			"select": "regexp_match_select.js",
+			"code": [{"file":"regexp_match_code.js", "name": "regexp_match_code"}]
+		},
+		{
+			"name":"RegexpSplit",
+			"description":{"en": "Split text with regexp","ru": "Разделить строку"},
+			"template":"{{Regexp}} -> {{Result}}",
+			"is_element": false,
+			"interface": "regexp_split_interface.js",
+			"select": "regexp_split_select.js",
+			"code": [{"file":"regexp_split_code.js", "name": "regexp_split_code"}]
+		}
+		
+	],
+	"localize": 
+	{
+		"String To Apply Regexp" : {"ru": "Строка Для Применения Регулярного Выражения"},
+		"Regular Expression" : {"ru": "Регулярное Выражение"},
+		"Separator Regular Expression" : {"ru": "Регулярное Выражение Разделитель"},
+		"Regular Expression Constructor" : {"ru": "Конструктор Регулярных Выражений"},
+		"can help you to create regexp." : {"ru": "может помочь в создании регулярки."},
+		"Extract string part with regular expression. For example, string : abc 123 xyz 456, regexp: \\d+ extracts all numbers": {"ru": "Извлечь часть строки с помощью регулярного выражения. Например, строка: abc 123 456 xyz, регулярное выражение: \\d+ извлекает все числа."},
+		"Extract string part with regular expression. For example, string : abc 123 xyz 456, regexp: \\d+ extracts first number": {"ru": "Извлечь часть строки с помощью регулярного выражения. Например, строка: abc 123 456 xyz, регулярное выражение: \\d+ извлекает первое число."}
+
+	},
+	"engine": [],
+	"browser": [],
+	"depends": []	
+}
+

@@ -1,0 +1,87 @@
+{
+	
+	"name":"Resources",
+	"info":{"en": "Use this module to insert element to resource or cast resource to list. To get element from resource use dropdown menu on any field.", "ru": "Используйте этот модуль, чтобы вставить элемент в ресурс или читать ресурс в список. Чтобы получить элемент из ресурса, используйте выпадающее меню на любом поле."},
+
+	"icon":"Resources.png",
+	"description":"Advanced way to manipulate resources",
+	"description_small":{"en": "Resources", "ru": "Ресурсы"},
+	"major_version": 1,
+	"minor_version": 2,
+	"developer_name": "bablosoft", 
+	"developer_email": "mail.to.twaego@gmail.com", 
+	"developer_site": "https://bablosoft.com",
+	"api_version": 1,
+	"actions":
+	[
+
+		{
+			"name":"CreateResource",
+			"description":{"en": "Create Resource","ru": "Создать Ресурс"},
+			"template": "{{Name}}",
+			"is_element": false,
+			"interface": "create_resource_interface.js",
+			"select": "create_resource_select.js",
+			"code": [{"file":"create_resource_code.js", "name": "create_resource_code"}]
+		},
+		{
+			"name":"DeleteCurrentElement",
+			"description":{"en": "Delete Current Element","ru": "Удалить Текущий Элемент"},
+			"template": "{{ResourceName}}",
+			"is_element": false,
+			"interface": "delete_current_element_interface.js",
+			"select": "delete_current_element_select.js",
+			"code": [{"file":"delete_current_element_code.js", "name": "delete_current_element_code"}]
+		},
+		{
+			"name":"ResourceAddElement",
+			"description":{"en": "Add Element","ru": "Добавить Элемент"},
+			"template": "{{Data}} -> {{ResourceName}}",
+			"is_element": false,
+			"interface": "resource_add_element_interface.js",
+			"select": "resource_add_element_select.js",
+			"code": [{"file":"resource_add_element_code.js", "name": "resource_add_element_code"}]
+		},
+		{
+			"name":"GetResouceLocation",
+			"description":{"en": "Resource Location","ru": "Расположение Ресурса"},
+			"template": "{{ResourceName}} -> {{Save}}",
+			"is_element": false,
+			"interface": "get_resource_location_interface.js",
+			"select": "get_resource_location_select.js",
+			"code": [{"file":"get_resource_location_code.js", "name": "get_resource_location_code"}]
+		},
+		{
+			"name":"ResourceToArray",
+			"description":{"en": "Resource To List","ru": "Ресурс В Список"},
+			"template": "{{ResourceName}} -> {{Save}}",
+			"is_element": false,
+			"interface": "resource_to_array_interface.js",
+			"select": "resource_to_array_select.js",
+			"code": [{"file":"resource_to_array_code.js", "name": "resource_to_array_code"}]
+		}
+	],
+	"localize": 
+	{
+		"Delete Current Element" : {"ru": "Удалить текущий элемент"},
+		"Resource name" : {"ru": "Имя ресурса"},
+		"Data to add" : {"ru": "Данные для добавления"},
+		"Delete from file/database instantly" : {"ru": "Удалить из файла/базы мгновенно"},
+		"In order to manage resource lifetime manually, you should first set resource success and fail number to a big value." : {"ru": "Чтобы управлять жизнью ресурсов вручную нужно установить количество успехов и неудач при создании ресурса в большое значение."},
+		"Add to file/database instantly" : {"ru": "Добавить в файл/базу мгновенно"},
+		"Only write to file/database" : {"ru": "Только добавить в файл/базу"},
+		"Success Usage" : {"ru": "Количество успехов"},
+		"Fail Usage" : {"ru": "Количество неудач"},
+		"Simultaneous Usage" : {"ru": "Одновременных использований"},
+		"Interval Between Usage" : {"ru": "Интервалы между использованиями"},
+		"Greedy Usage Algorithm" : {"ru": "Жадный алгоритм"},
+		"Wait For Resource" : {"ru": "Ждать появления"},
+		"Resource Location is filename for LinesFromFile resource, url for LinesFromUrl and directory location for FilesFromDirectory resource type." : {"ru": "Расположение Ресурса является именем файла для ресурса типа Из Файла, url для типа Из Ссылки и путь к папке для ресурса типа Файлы Из Папки."},
+    	"List To Save" : {"ru": "Список Для Сохранения Данных"}
+
+
+	},
+	"engine": [],
+	"browser": [],
+	"depends": []	
+}
